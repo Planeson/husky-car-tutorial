@@ -1,0 +1,27 @@
+{
+    "name": "huskyCarTutorial",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*",
+        "Huskylens": "github:dfrobot/pxt-dfrobot_huskylens#v2.0.7",
+        "PKS Driver": "github:peanut-king-solution/pxt-pks-shield#81fca8acce468869e7f9ba054106f031bdebd66e"
+    },
+    "files": [
+        "main.ts",
+        "README.md",
+        "tutorial.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "7.0.61",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
+}
