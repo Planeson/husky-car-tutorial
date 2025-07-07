@@ -2,8 +2,8 @@
 
 ## Implementation
 ### Right to be left? Left to be right?
-We want to turn the car towards the object.
-Use the *HuskyLens get X center of ID 1 frame from the result* block to determine whether to turn left or right.
+We want to turn the car towards the object.  
+Use the *HuskyLens get X center of ID 1 frame from the result* block to determine whether to turn left or right.  
 ```blocks
 basic.forever(function () {
     huskylens.request()
@@ -34,10 +34,10 @@ basic.forever(function () {
 ```
 
 ## Turn to the left in threes, left turn!
-Turn towards the object.
-Use a variable, which you can name *delta*, to store the difference between the centre of the frame and the centre of the display (160).
-Set the left motor CW at speed of 0.4 * *delta*, the right motor also CW but at -0.4 * *delta*. Turn the LED off.
-If the object isn't found, set both motors to speed 0, and turn the LED back on. 
+Turn towards the object.  
+Use a variable, which you can name *delta*, to store the difference between the centre of the frame and the centre of the display (160).  
+Set the left motor CW at speed of 0.4 * *delta*, the right motor also CW but at -0.4 * *delta*. Turn the LED off.  
+If the object isn't found, set both motors to speed 0, and turn the LED back on.   
 ```blocks
 let delta = 0
 basic.forever(function () {
