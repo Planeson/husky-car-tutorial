@@ -3,7 +3,7 @@
 
 ## Tutorials
 
-* [Tutorial](/husky-car-tutorial/tutorial)
+* [Checkpoint 1](/husky-car-tutorial/cp1)
 
 ## Use as Extension
 
