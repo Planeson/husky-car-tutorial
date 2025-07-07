@@ -10,6 +10,7 @@
         "PKS Driver": "github:peanut-king-solution/pxt-pks-shield#81fca8acce468869e7f9ba054106f031bdebd66e"
     },
     "files": [
+        "main.blocks",
         "main.ts",
         "README.md",
         "tutorial.md"
