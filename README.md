@@ -4,6 +4,8 @@
 ## Tutorials
 
 * [Checkpoint 1](/husky-car-tutorial/cp1)
+* [Checkpoint 2](/husky-car-tutorial/cp2)
+* [Checkpoint 3](/husky-car-tutorial/cp3)
 
 ## Use as Extension
 
