@@ -1,4 +1,4 @@
-# Object-tracking car
+# Checkpoint 1
 ## HuskyLens
 Follow the instructions and learn how to use HuskyLens first, then come back to this section.
 
@@ -20,7 +20,7 @@ If the object is found, turn both motors clockwise (CW) to a speed of 40, and tu
 If the object isn't found, turn both motors to a speed of 0, then turn on the LED at pin P0.
 ```blocks
 basic.forever(function () {
-    huskylens.initI2c()
+    huskylens.request()
     if (huskylens.isAppear_s(HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
         pksdriver.MotorRun(pksdriver.Motors.M1, pksdriver.Dir.CW, 40)
         pksdriver.MotorRun(pksdriver.Motors.M2, pksdriver.Dir.CW, 40)
