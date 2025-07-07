@@ -17,6 +17,8 @@ basic.showIcon(IconNames.Yes)
 ## forever
 You need to keep looking for the object. Use this block to retrieve data from the HuskyLens.
 ```blocks
-huskylens.request()
+basic.forever(function () {
+    huskylens.request()
+}
 ```
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
