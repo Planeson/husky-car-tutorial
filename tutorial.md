@@ -15,10 +15,21 @@ basic.showIcon(IconNames.Yes)
 ```
 
 ## forever
-You need to keep looking for the object. Use this block to retrieve data from the HuskyLens.
+You need to keep looking for the object.  
+If the object is found, turn both motors CW to a speed of 40, and turn off the LED at pin P0.  
+If the object isn't found, turn both motors to a speed of 0, then turn on the LED at pin P0.
 ```blocks
 basic.forever(function () {
-    huskylens.request()
-}
+    huskylens.initI2c()
+    if (huskylens.isAppear_s(HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
+        pksdriver.MotorRun(pksdriver.Motors.M1, pksdriver.Dir.CW, 40)
+        pksdriver.MotorRun(pksdriver.Motors.M2, pksdriver.Dir.CW, 40)
+        pins.digitalWritePin(DigitalPin.P0, 0)
+    } else {
+        pksdriver.MotorRun(pksdriver.Motors.M1, pksdriver.Dir.CW, 0)
+        pksdriver.MotorRun(pksdriver.Motors.M2, pksdriver.Dir.CW, 0)
+        pins.digitalWritePin(DigitalPin.P0, 1)
+    }
+})
 ```
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
