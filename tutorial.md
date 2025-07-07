@@ -1,8 +1,10 @@
 # Object-tracking car
-## HuskyLens
+## Step 1
+### HuskyLens
 Follow the instructions and learn how to use HuskyLens first, then come back to this section.
 
-## Implementation
+## Step 2
+### Implementation
 ### set up
 Now that you have connected the HuskyLens to your BBC micro:bit, start by initializing your HuskyLens using your micro:bit.
 ```block
@@ -15,7 +17,7 @@ huskylens.initI2c()
 huskylens.initMode(protocolAlgorithm.ALGORITHM_OBJECT_TRACKING)
 basic.showIcon(IconNames.Yes)
 ```
-
+## Step 3
 ### forever
 You need to keep looking for the object. Use this block to retrieve data from the HuskyLens.
 ```block
