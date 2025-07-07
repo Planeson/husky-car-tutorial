@@ -1,6 +1,10 @@
 
 > Open this page at [https://planeson.github.io/husky-car-tutorial/](https://planeson.github.io/husky-car-tutorial/)
 
+## Tutorials
+
+* [Tutorial](/husky-car-tutorial/tutorial)
+
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
