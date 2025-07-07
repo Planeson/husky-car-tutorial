@@ -44,8 +44,8 @@ basic.forever(function () {
     huskylens.request()
     if (huskylens.isAppear_s(HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
         delta = huskylens.readeBox(1, Content1.xCenter) - 160
-        pksdriver.MotorRun(pksdriver.Motors.M1, pksdriver.Dir.CW, 0.4 * delta)
-        pksdriver.MotorRun(pksdriver.Motors.M2, pksdriver.Dir.CW, -0.4 * delta)
+        pksdriver.MotorRun(pksdriver.Motors.M1, pksdriver.Dir.CCW, 0.4 * delta)
+        pksdriver.MotorRun(pksdriver.Motors.M2, pksdriver.Dir.CCW, -0.4 * delta)
         pins.digitalWritePin(DigitalPin.P0, 0)
     } else {
         pksdriver.MotorRun(pksdriver.Motors.M1, pksdriver.Dir.CW, 0)
