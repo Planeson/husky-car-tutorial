@@ -43,9 +43,10 @@ let delta = 0
 basic.forever(function () {
     huskylens.request()
     if (huskylens.isAppear_s(HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
+        speed = 255 - huskylens.readeBox(1, Content1.width)
         delta = huskylens.readeBox(1, Content1.xCenter) - 160
-        pksdriver.MotorRun(pksdriver.Motors.M1, pksdriver.Dir.CW, 0.4 * delta)
-        pksdriver.MotorRun(pksdriver.Motors.M2, pksdriver.Dir.CW, -0.4 * delta)
+        pksdriver.MotorRun(pksdriver.Motors.M1, pksdriver.Dir.CW, 0.4 * (speed + delta))
+        pksdriver.MotorRun(pksdriver.Motors.M2, pksdriver.Dir.CW, 0.4 * (speed - delta))
         pins.digitalWritePin(DigitalPin.P0, 0)
     } else {
         pksdriver.MotorRun(pksdriver.Motors.M1, pksdriver.Dir.CW, 0)
@@ -53,7 +54,6 @@ basic.forever(function () {
         pins.digitalWritePin(DigitalPin.P0, 1)
     }
 })
-
 ```
 ## Conclusion
 Congrats! Your car now goes forward when a recognized object is found. If it isn't found, it stops and lights and LED.

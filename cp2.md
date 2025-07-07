@@ -56,5 +56,5 @@ basic.forever(function () {
 
 ```
 ## Conclusion
-Congrats! Your car now goes forward when a recognized object is found. If it isn't found, it stops and lights and LED.
+Congrats! Your car now goes turns towards the recognized object.
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
