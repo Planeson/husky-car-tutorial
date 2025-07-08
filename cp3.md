@@ -1,43 +1,31 @@
-# Checkpoint 2
+# Checkpoint 3
 
-## Implementation
-### Right to be left? Left to be right?
-We want to turn the car towards the object.
-Use the *HuskyLens get X center of ID 1 frame from the result* block to determine whether to turn left or right.
+## Slow is smooth, smooth is fast.
+To ensure accuracy, slow the car down when the object is close, but speed it back up if it is far away!  
+Use the *HuskyLens get width of ID 1 frame from the result* block to determine roughly how far the object is away from the car.  
 ```blocks
+let delta = 0
 basic.forever(function () {
     huskylens.request()
     if (huskylens.isAppear_s(HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
-        if (huskylens.readeBox(1, Content1.xCenter) > 160) {
-            basic.showLeds(`
-                . . # . .
-                . . . # .
-                # # # # #
-                . . . # .
-                . . # . .
-                `)
-        } else {
-            basic.showLeds(`
-                . . # . .
-                . # . . .
-                # # # # #
-                . # . . .
-                . . # . .
-                `)
-        }
-    }
-    else
-    {
-        basic.showIcon(IconNames.No)
+        speed = 255 - huskylens.readeBox(1, Content1.width)
+        pksdriver.MotorRun(pksdriver.Motors.M1, pksdriver.Dir.CW, 0.3 * speed)
+        pksdriver.MotorRun(pksdriver.Motors.M2, pksdriver.Dir.CW, 0.3 * speed)
+        pins.digitalWritePin(DigitalPin.P0, 0)
+    } else {
+        pksdriver.MotorRun(pksdriver.Motors.M1, pksdriver.Dir.CW, 0)
+        pksdriver.MotorRun(pksdriver.Motors.M2, pksdriver.Dir.CW, 0)
+        pins.digitalWritePin(DigitalPin.P0, 1)
     }
 })
 ```
 
-## Turn to the left in threes, left turn!
-Turn towards the object.
-Use a variable, which you can name *delta*, to store the difference between the centre of the frame and the centre of the display (160).
-Set the left motor CW at speed of 0.4 * *delta*, the right motor also CW but at -0.4 * *delta*. Turn the LED off.
-If the object isn't found, set both motors to speed 0, and turn the LED back on. 
+## Assessment
+### It all comes together!
+Implement the entire object-tracking car.  
+Like in [checkpoint 2](/husky-car-tutorial/cp2), use a variable, which you can name *delta*, to store the difference between the centre of the frame and the centre of the display (160).  
+Set the left motor CW at speed of 0.3 * *speed+delta*, the right motor also CW but at 0.3 * *speed-delta*. Turn the LED off.  
+If the object isn't found, set both motors to speed 0, and turn the LED back on.  
 ```blocks
 let delta = 0
 basic.forever(function () {
@@ -45,8 +33,8 @@ basic.forever(function () {
     if (huskylens.isAppear_s(HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
         speed = 255 - huskylens.readeBox(1, Content1.width)
         delta = huskylens.readeBox(1, Content1.xCenter) - 160
-        pksdriver.MotorRun(pksdriver.Motors.M1, pksdriver.Dir.CW, 0.4 * (speed + delta))
-        pksdriver.MotorRun(pksdriver.Motors.M2, pksdriver.Dir.CW, 0.4 * (speed - delta))
+        pksdriver.MotorRun(pksdriver.Motors.M1, pksdriver.Dir.CW, 0.3 * (speed + delta))
+        pksdriver.MotorRun(pksdriver.Motors.M2, pksdriver.Dir.CW, 0.3 * (speed - delta))
         pins.digitalWritePin(DigitalPin.P0, 0)
     } else {
         pksdriver.MotorRun(pksdriver.Motors.M1, pksdriver.Dir.CW, 0)
@@ -56,5 +44,6 @@ basic.forever(function () {
 })
 ```
 ## Conclusion
-Congrats! Your car now goes forward when a recognized object is found. If it isn't found, it stops and lights and LED.
+Congrats! Your car now tracks an object around! You can fine the the numbers around to make its performance better, like giving a multiplier to `delta` / `speed`.  
+Extended thinking - how difficult would tracking an object be if you don't have AI to learn the appearance of objects? Is it even possible?  
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
