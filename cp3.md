@@ -4,7 +4,7 @@
 To ensure accuracy, slow the car down when the object is close, but speed it back up if it is far away!  
 Use the *HuskyLens get width of ID 1 frame from the result* block to determine roughly how far the object is away from the car.  
 ```blocks
-let delta = 0
+let speed = 0
 basic.forever(function () {
     huskylens.request()
     if (huskylens.isAppear_s(HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
@@ -24,9 +24,10 @@ basic.forever(function () {
 ### It all comes together!
 Implement the entire object-tracking car.  
 Like in [checkpoint 2](/husky-car-tutorial/cp2), use a variable, which you can name *delta*, to store the difference between the centre of the frame and the centre of the display (160).  
-Set the left motor CW at speed of 0.3 * *speed+delta*, the right motor also CW but at 0.3 * *speed-delta*. Turn the LED off.  
+Set the left motor CW at speed of 0.3 * *(speed+delta)*, the right motor also CW but at 0.3 * *(speed-delta)*. Turn the LED off.  
 If the object isn't found, set both motors to speed 0, and turn the LED back on.  
 ```blocks
+let speed = 0
 let delta = 0
 basic.forever(function () {
     huskylens.request()
