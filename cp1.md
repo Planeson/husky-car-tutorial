@@ -5,6 +5,7 @@ Follow the instructions and learn how to use HuskyLens first, then come back to 
 ## Implementation
 ### Set up!
 Now that you have connected the HuskyLens to your BBC micro:bit, start by initializing your HuskyLens using your micro:bit.  
+From the ``||huskylens:HuskyLens||`` category, insert a ``||huskylens:HuskyLens initialize I2C until success||`` block into the ``||basic:on start||`` block.  
 ```blocks
 basic.showIcon(IconNames.Heart)
 pksdriver.MotorRun(pksdriver.Motors.M1, pksdriver.Dir.CW, 0)
