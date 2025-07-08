@@ -56,5 +56,7 @@ basic.forever(function () {
 
 ```
 ## Conclusion
-Congrats! Your car now goes turns towards the recognized object.
+Congrats! Your car now goes turns towards the recognized object.  
+
+[Checkpoint 3](/husky-car-tutorial/cp3)  
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>

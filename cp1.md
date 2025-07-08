@@ -34,4 +34,6 @@ basic.forever(function () {
 ```
 ## Conclusion
 Congrats! Your car now goes forward when a recognized object is found. If it isn't found, it stops and lights and LED.  
+
+[Checkpoint 2](/husky-car-tutorial/cp2)  
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
