@@ -3,7 +3,8 @@
 ## Slow is smooth, smooth is fast.
 To ensure accuracy, slow the car down when the object is close, but speed it back up if it is far away!  
 Use the *HuskyLens get width of ID 1 frame from the result* block to determine roughly how far the object is away from the car.  
-You can use the ``||huskylens:HuskyLens get width of ID 1 frame from the result||`` block to get the width value. You may also want the ``||variables:Variables||`` ``|Make a Variable|`` block to create a variable named `Speed`, the ``||math:arithmetic||`` block for calculations, the ``||pksdriver:motor M1 dir CW speed 0||``block to control the motors, and the ``||pins:digital write pin P0 to 0||`` block to control the LED.
+When the object is found, set the motor speed to 0.3 * *speed*, where *speed* is *255 - width of the frame*, and turn off the LED. When the object isn't found, set the motor speed back to 0, and turn on the LED.  
+You can use the ``||huskylens:HuskyLens get width of ID 1 frame from the result||`` block to get the width value. You may also want the ``||variables:Variables||`` ``|Make a Variable|`` block to create a variable named `Speed`, the ``||math:arithmetic||`` block for calculations, the ``||pksdriver:motor M1 dir CW speed 0||``block to control the motors, and the ``||pins:digital write pin P0 to 0||`` block to control the LED.  
 ```blocks
 let speed = 0
 basic.forever(function () {
@@ -25,9 +26,8 @@ basic.forever(function () {
 ### It all comes together!
 Implement the entire object-tracking car.  
 Like in [checkpoint 2](/husky-car-tutorial/cp2), use a variable, which you can name *delta*, to store the difference between the centre of the frame and the centre of the display (160).  
-You can use the ``||huskylens:HuskyLens get X center of ID 1 frame from the result||`` block to get the X center value, the ``||variables:Variables||`` ``|variables:Make a Variable|`` block to create a variable named delta, the ``||math:arithmetic||`` block for calculations, the ``||pksdriver:motor M1 dir CW speed 0||`` block to control the motors, and the ``||pins:digital write pin P0 to 0||`` block to control the LED.
-Set the left motor CW at speed of 0.3 * *(speed+delta)*, the right motor also CW but at 0.3 * *(speed-delta)*. Turn the LED off.  
-If the object isn't found, set both motors to speed 0, and turn the LED back on.  
+Set the left motor CW at speed of 0.3 * *(speed+delta)*, the right motor also CW but at 0.3 * *(speed-delta)*. Turn the LED off. If the object isn't found, set both motors to speed 0, and turn the LED back on.  
+You can use the ``||huskylens:HuskyLens get X center of ID 1 frame from the result||`` block to get the X center value, the ``||variables:Variables||`` ``|variables:Make a Variable|`` block to create a variable named delta, the ``||math:arithmetic||`` block for calculations, the ``||pksdriver:motor M1 dir CW speed 0||`` block to control the motors, and the ``||pins:digital write pin P0 to 0||`` block to control the LED.  
 ```blocks
 let speed = 0
 let delta = 0
