@@ -15,7 +15,7 @@ basic.showIcon(IconNames.Yes)
 ```
 
 ## Get Moving!
-You need to keep looking for the object. If the object is found, turn both motors clockwise (CW) to a speed of 40, and turn off the LED at pin P0. If the object isn't found, turn both motors to a speed of 0, then turn on the LED at pin P0. In case you forgot, you can use the ``||pksdriver:motor M1 dir CW speed 0||`` block to set a motor's speed.
+You need to keep looking for the object. If the object is found, turn both motors clockwise (CW) to a speed of 40, and turn off the LED at pin P0. If the object isn't found, turn both motors to a speed of 0, then turn on the LED at pin P0. In case you forgot, you can use the ``||pksdriver:motor M1 dir CW speed 0||`` block inside the *Edu Kit* subcategory to set a motor's speed, and you can use the ``||pins:digital write pin P0 to 1||`` block to turn on/off an LED connected to pin P0.
 ```blocks
 basic.forever(function () {
     huskylens.request()
