@@ -2,7 +2,7 @@
 
 ## Right to be left? Left to be right?
 We want to turn the car towards the object.  
-Use the ``||huskylens:HuskyLens get X center of ID 1 frame from the result||`` block to determine whether to turn left or right. Hint: the centre of the screen is at x=160.  
+Use the ``||huskylens:HuskyLens get X center of ID 1 frame from the result||`` block to determine whether to turn left or right. Hint: the centre of the screen is at x=160. You can check if the X centre is larger or smaller than 160.  
 ```blocks
 basic.forever(function () {
     huskylens.request()
