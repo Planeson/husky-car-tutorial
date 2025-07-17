@@ -48,6 +48,6 @@ basic.forever(function () {
 })
 ```
 ## Conclusion
-Congrats! Your car now tracks an object around! You can fine the the numbers around to make its performance better, like giving a multiplier to `delta` / `speed`.  
+Congrats! Your car now tracks an object around! You can fine the the numbers around to make its performance better, like giving a multiplier to `delta` or to `speed`.  
 Extended thinking - how difficult would tracking an object be if you don't have AI to learn the appearance of objects? Is it even possible?  
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
