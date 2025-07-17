@@ -1,5 +1,5 @@
 # Checkpoint 2
-
+[Interactive - Checkpoint 2](https://makecode.microbit.org/#tutorial:github:planeson/husky-car-tutorial/cp2)
 ## Right to be left? Left to be right?
 We want to turn the car towards the object.  
 Use the ``||huskylens:HuskyLens get X center of ID 1 frame from the result||`` block to determine whether to turn left or right. Hint: the centre of the screen is at x=160. You can check if the X centre is larger or smaller than 160.  
@@ -57,5 +57,6 @@ basic.forever(function () {
 ## Conclusion
 Congrats! Your car now goes turns towards the recognized object.  
 
-[Checkpoint 3](/husky-car-tutorial/cp3)  
+[Interactive - Checkpoint 3](https://makecode.microbit.org/#tutorial:github:planeson/husky-car-tutorial/cp3)
+[GitHub Pages - Checkpoint 3](https://planeson.github.io/husky-car-tutorial/cp3)  
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>

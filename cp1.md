@@ -1,4 +1,5 @@
 # Checkpoint 1
+[Interactive - Checkpoint 1](https://makecode.microbit.org/#tutorial:github:planeson/husky-car-tutorial/cp1)
 ## HuskyLens
 Follow the instructions and learn how to use HuskyLens first, then come back to this section.  
 
@@ -33,5 +34,6 @@ basic.forever(function () {
 ## Conclusion
 Congrats! Your car now goes forward when a recognized object is found. If it isn't found, it stops and lights an LED.  
 
-[Checkpoint 2](/husky-car-tutorial/cp2)  
+[Interactive - Checkpoint 2](https://makecode.microbit.org/#tutorial:github:planeson/husky-car-tutorial/cp2)
+[GitHub Pages - Checkpoint 2](https://planeson.github.io/husky-car-tutorial/cp2)  
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
