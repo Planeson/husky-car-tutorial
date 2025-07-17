@@ -57,6 +57,6 @@ basic.forever(function () {
 ## Conclusion
 Congrats! Your car now goes turns towards the recognized object.  
 
-[Interactive - Checkpoint 3](https://makecode.microbit.org/#tutorial:github:planeson/husky-car-tutorial/cp3)
-[GitHub Pages - Checkpoint 3](https://planeson.github.io/husky-car-tutorial/cp3)  
+[\[Interactive\] - Checkpoint 3](https://makecode.microbit.org/#tutorial:github:planeson/husky-car-tutorial/cp3)  
+[\[GitHub Pages\] - Checkpoint 3](https://planeson.github.io/husky-car-tutorial/cp3)  
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>

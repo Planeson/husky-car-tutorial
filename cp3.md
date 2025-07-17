@@ -1,6 +1,6 @@
 # Checkpoint 3
 
-[Interactive - Checkpoint 3](https://makecode.microbit.org/#tutorial:github:planeson/husky-car-tutorial/cp3)
+[Interactive - Checkpoint 3](https://makecode.microbit.org/#tutorial:github:planeson/husky-car-tutorial/cp3)  
 ## Slow is smooth, smooth is fast.
 To ensure accuracy, slow the car down when the object is close, but speed it back up if it is far away!  
 Use the *HuskyLens get width of ID 1 frame from the result* block to determine roughly how far the object is away from the car.  
