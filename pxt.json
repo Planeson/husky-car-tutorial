@@ -1,6 +1,6 @@
 {
     "name": "huskyCarTutorial",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "",
     "dependencies": {
         "core": "*",
@@ -21,7 +21,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "7.0.61",
+        "target": "8.0.8",
         "targetId": "microbit"
     },
     "supportedTargets": [
