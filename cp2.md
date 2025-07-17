@@ -7,20 +7,20 @@ Use the ``||huskylens:HuskyLens get X center of ID 1 frame from the result||`` b
 basic.forever(function () {
     huskylens.request()
     if (huskylens.isAppear_s(HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
-        if (huskylens.readeBox(1, Content1.xCenter) > 160) {
+        if (huskylens.readeBox(1, Content1.xCenter) < 160) {
             basic.showLeds(`
                 . . # . .
-                . . . # .
+                . # . . .
                 # # # # #
-                . . . # .
+                . # . . .
                 . . # . .
                 `)
         } else {
             basic.showLeds(`
                 . . # . .
-                . # . . .
+                . . . # .
                 # # # # #
-                . # . . .
+                . . . # .
                 . . # . .
                 `)
         }
